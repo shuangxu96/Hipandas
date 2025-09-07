@@ -104,17 +104,19 @@ Hipandas/
 
 ## 📥 Dataset Preparation
 1. Create a `data` directory in the project root
-2. Download the base data `Dongying_1_1.mat` 
-3. Place `Dongying_1_1.mat` into the `data` directory:
+2. Download the base data `Dongying_1_1.mat`
+       Link: https://pan.baidu.com/s/15hdJooFUbSzGbbz1gMdAyQ?pwd=nwpu
+       Password: nwpu 
+4. Place `Dongying_1_1.mat` into the `data` directory:
    ```
    data/
    └── Dongying_1_1.mat          
    ```
-4. Run the data simulation script to generate various noise cases:
+5. Run the data simulation script to generate various noise cases:
    ```bash
    python simulate_data.py
    ```
-5. The script will create organized subdirectories with simulated noise:
+6. The script will create organized subdirectories with simulated noise:
    ```
    data/
    ├── g10/           # Gaussian noise (σ=10)
@@ -127,7 +129,7 @@ Hipandas/
    ├── mix35/         # Mixed noise 2
    └── mix55/         # Mixed noise 3
    ```
-6. Each MAT file contains:
+7. Each MAT file contains:
    - `I_GT`: Ground truth hyperspectral image 
    - `I_LRHS`: Low-resolution hyperspectral image 
    - `I_PAN`: Panchromatic image 
