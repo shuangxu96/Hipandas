@@ -1,4 +1,4 @@
-# Hipandas: Hyperspectral Image Joint Denoising and Super-Resolution Framework 
+# 🐼 Hipandas: Hyperspectral Image Joint Denoising and Super-Resolution Framework 
 
 <p align="center">
 <img src="imgs/hipandas_vs_pansharpening.jpg" alt="Hipandas Comparison">
