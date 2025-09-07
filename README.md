@@ -29,7 +29,7 @@ that propagate errors between stages .
 
 1. **Two-Stage Training Strategy**
    <p align="center">
-   <img src="imgs/net_framework" alt="Hipandas Framework">
+   <img src="imgs/net_framework.jpg" alt="Hipandas Framework">
    <br>
    <em>The two-stage training strategy of UHipandas</em>
    </p>
@@ -82,18 +82,18 @@ The framework comprises three interconnected components working in synergy:
 ## 📁 Project Structure
 ```
 Hipandas-Release/
-├── model.py              # Network architectures (GDN, GSRN, PRN) 🏗️
-├── simulate_data.py      # Network architectures (GDN, GSRN, PRN) 🏗️
-├── main.py               # Main training and evaluation script 🎯
-├── eval_metric.py        # Network architectures (GDN, GSRN, PRN) 🏗️
-├── utils/                # Utility functions 🧰
+├── model.py              # Network architectures (GDN, GSRN, PRN) 
+├── simulate_data.py      # Network architectures (GDN, GSRN, PRN) 
+├── main.py               # Main training and evaluation script
+├── eval_metric.py        # Network architectures (GDN, GSRN, PRN) 
+├── utils/                # Utility functions 
 │   ├── common.py         # Seed setup and common utilities
-│   ├── metrics.py        # Evaluation metrics (ERGAS, etc.) 📊
-│   ├── rsshow.py         # Visualization tools for remote sensing images 🖼️
-│   ├── spectral_tools.py # Spectral processing utilities 🌈
-│   └── noise_model.py    # Noise generation models 🌀
-├── data/                 # Dataset directory (to be created) 🗂️
-└── result/               # Output results directory (auto-created) 📦
+│   ├── metrics.py        # Evaluation metrics (ERGAS, etc.) 
+│   ├── rsshow.py         # Visualization tools for remote sensing images 
+│   ├── spectral_tools.py # Spectral processing utilities 
+│   └── noise_model.py    # Noise generation models 
+├── data/                 # Dataset directory (to be created) 
+└── result/               # Output results directory (auto-created) 
 ```
 
 ## 📥 Dataset Preparation
@@ -171,12 +171,12 @@ This produces an Excel file with quantitative results:
 ## 🔍 Performance Highlights
 
 <p align="center">
-<img src="imgs/result_gauss" alt="result_gauss">
+<img src="imgs/result_gauss.jpg" alt="result_gauss">
 <br>
 <em>Results with Gaussian noise</em>
 </p>
 <p align="center">
-<img src="imgs/result_mix" alt="result_mix">
+<img src="imgs/result_mix.jpg" alt="result_mix">
 <br>
 <em>Results with mixed noise</em>
 </p>
