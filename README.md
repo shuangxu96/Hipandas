@@ -1,5 +1,11 @@
 # 🐼 Hipandas: Hyperspectral Image Joint Denoising and Super-Resolution Framework 
 
+Codes for **"Hipandas: Hyperspectral Image Joint Denoising and Super-Resolution by Image Fusion with the Panchromatic Image" (ICCV 2025)**
+
+[Shuang Xu(徐爽)](https://teacher.nwpu.edu.cn/shuangxu), [Zixiang Zhao(赵子祥)](https://zhaozixiang1228.github.io/), Haowen Bai(白浩闻), Chang Yu(余畅), [Jiangjun Peng(彭江军)](https://teacher.nwpu.edu.cn/pengjj), [Xiangyong Cao(曹相湧)](https://gr.xjtu.edu.cn/web/caoxiangyong), [Deyu Meng(孟德宇)](https://gr.xjtu.edu.cn/en/web/dymeng)
+       
+         
+                  
 <p align="center">
 <img src="imgs/hipandas_vs_pansharpening.jpg" alt="Hipandas Comparison">
 <br>
@@ -45,18 +51,18 @@ that propagate errors between stages .
 
 The framework comprises three interconnected components working in synergy:
 
-1. **GDN (Guided Denoising Network) 🔍**
+1. **GDN (Guided Denoising Network)**
    - Utilizes low-rank matrix decomposition combined with deep learning
    - Learns spectral-spatial correlations to suppress noise while preserving critical features
    - Incorporates gated recurrent convolution units for effective spatio-spectral feature extraction 
    - Takes noisy LRHS as input and produces clean low-resolution HSIs
 
-2. **GSRN (Guided Super-Resolution Network) 📈**
+2. **GSRN (Guided Super-Resolution Network)**
    - Enhances spatial resolution using both denoised HSIs and PAN image guidance
    - Implements multi-scale feature fusion to propagate fine details from PAN to HSI
    - Uses low-rank decomposition to maintain spectral consistency during upsampling 
 
-3. **PRN (Panchromatic Reconstruction Network) 🔄**
+3. **PRN (Panchromatic Reconstruction Network)**
    - Predicts PAN images from super-resolved HSIs to enforce cross-modal consistency
    - Implements cross-layer guided attention mechanisms for effective feature alignment 
    - Serves as a spectral-spatial consistency check to prevent distortion
@@ -81,19 +87,19 @@ The framework comprises three interconnected components working in synergy:
 
 ## 📁 Project Structure
 ```
-Hipandas-Release/
+Hipandas/
 ├── model.py              # Network architectures (GDN, GSRN, PRN) 
-├── simulate_data.py      # Network architectures (GDN, GSRN, PRN) 
-├── main.py               # Main training and evaluation script
-├── eval_metric.py        # Network architectures (GDN, GSRN, PRN) 
-├── utils/                # Utility functions 
-│   ├── common.py         # Seed setup and common utilities
-│   ├── metrics.py        # Evaluation metrics (ERGAS, etc.) 
-│   ├── rsshow.py         # Visualization tools for remote sensing images 
-│   ├── spectral_tools.py # Spectral processing utilities 
-│   └── noise_model.py    # Noise generation models 
-├── data/                 # Dataset directory (to be created) 
-└── result/               # Output results directory (auto-created) 
+├── simulate_data.py      # Generate noisy hyperspectral datasets with various noise models   
+├── main.py               # Main training & evaluation pipeline (orchestrates model training/inference)   
+├── eval_metric.py        # Calculate quantitative metrics (PSNR, SSIM, SAM, ERGAS)   
+├── utils/                # Core utility modules  
+│   ├── common.py         # Basic utilities (seed setup, device config, data conversion)  
+│   ├── metrics.py        # Core metric calculation functions (used by eval_metric.py)  
+│   ├── rsshow.py         # Visualization tools for hyperspectral/panchromatic images  
+│   ├── spectral_tools.py # Spectral processing utilities (e.g., spectral response handling)  
+│   └── noise_model.py    # Noise generation implementations (Gaussian, impulse, mixed noise) 
+├── data/                 # Dataset storage (to be created; populated by simulate_data.py)  
+└── result/               # Output directory for reconstructed images & metrics (auto-created)
 ```
 
 ## 📥 Dataset Preparation
